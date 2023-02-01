@@ -1,1 +1,25 @@
+name: Covid Tracker App
+on:
+  push:
+    branches: [master]
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
 
+    - name: setting the node.js environment
+      uses: actions/setup-node@v2-beta
+      with:
+        vesion: 16
+    - name: github action for yarn
+      uses: Borales/actions-yarn@97ba8bebfe5b549bb7999261698a52a81fd62f1b
+      with:
+        cmd: install
+    - name: creating yarn build
+      run: yarn build
+    - name: installing surge
+      run: npm install --global surge
+    - name: deploy on surge react app
+      run: surge ./build chilly-connection.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
