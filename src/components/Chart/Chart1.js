@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import { fetchDailyData } from '../../api';
 import styles from './Chart.module.css';
-import Chart from 'chart.js/auto';
+// import Chart from 'chart.js/auto';
 // import {chart as chartJS , ArcElement, Tooltip, Legend, CategoryScale} from 'chart.js';
 // import {chart} from 'react-chartjs-2'
 import {Line} from 'react-chartjs-2';
