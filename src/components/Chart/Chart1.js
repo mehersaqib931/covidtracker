@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import { fetchDailyData } from '../../api';
 import styles from './Chart.module.css';
-import { borderColor } from '@mui/system';
 import Chart from 'chart.js/auto';
 // import {chart as chartJS , ArcElement, Tooltip, Legend, CategoryScale} from 'chart.js';
 // import {chart} from 'react-chartjs-2'
